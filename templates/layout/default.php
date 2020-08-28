@@ -59,15 +59,10 @@ hljs.initHighlightingOnLoad();
 <!-- Footer -->
 <footer class="w3-container w3-dark-grey">
   <p>
-Infos techniques sur ce blog : 
-<ul>
-<li>Back-End : CakePHP 4 <a href="https://cakephp.org/" target="_blank">Site Officiel</a></li>
-<li>Front-End : W3 CSS <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Site Officiel</a></li>
-<li>Stockage des articles : MariaDB <a href="https://mariadb.org/" target="_blank">Site Officiel</a></li>
-<li>Police : Athiti <a href="https://fonts.google.com/specimen/Athiti" target="_blank">Google Fonts</a></li>
-<li>Icônes : Font Awesome <a href="https://fontawesome.com/" target="_blank">Site Officiel</a></li>
-<li>Code source : HightLight JS <a href="https://highlightjs.org/" target="_blank">Site Officiel</a></li>
-</ul>
+Code source : <a href="https://christophekheder.com/projects/christophe/blog" target="_blank">ici</a>
+
+<br />
+
 Tous les articles sont disponibles sous licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">Creative Commons Attribution 4.0 International license</a>
 </p>
 </footer>
