@@ -413,7 +413,6 @@ class AdminController extends AppController
 */
     public function parsing_content($article)
     {
-
         // Url
 
             if (preg_match_all('~\{Url}([^{]*)\{/Url}~i', $article))

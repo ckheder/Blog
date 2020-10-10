@@ -5,6 +5,7 @@
 /logs/*
 /tmp/*
 /vendor/*
+blog.sql
 
 # OS generated files #
 ######################

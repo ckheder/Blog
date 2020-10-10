@@ -32,7 +32,10 @@ echo $this->Paginator->sort('created',$texte_link,['escape' => false, 'direction
                     <th>Titre</th>
                     <th>Article</th>
                     <th>Categorie</th>
+<<<<<<< HEAD
                     <th>Crée</th>
+=======
+>>>>>>> cb6315eada19c4ce4bb8f6f564ffdb70a0c3e37f
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -40,9 +43,14 @@ echo $this->Paginator->sort('created',$texte_link,['escape' => false, 'direction
                 <?php foreach ($articles as $article): ?>
                 <tr>
                     <td><?= h($article->titre) ?></td>
+<<<<<<< HEAD
                     <td><?= h($article->corps) ?></td>
                     <td><?= h($article->categorie) ?></td>
                     <td><?= h($article->created) ?></td>
+=======
+                    <td style="padding: 1px !important"><?= h($article->corps) ?></td>
+                    <td><?= h($article->categorie) ?></td>
+>>>>>>> cb6315eada19c4ce4bb8f6f564ffdb70a0c3e37f
                     <td class="actions">
                         <?= $this->Html->link(__('Modifier'), ['action' => 'editarticle', $article->id]) ?>
                     </td>
