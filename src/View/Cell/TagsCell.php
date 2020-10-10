@@ -31,7 +31,7 @@ class TagsCell extends Cell
     {
         $this->loadModel('Tags');
 
-        $list_tags = $this->Tags->find()->select(['titre']);
+        $list_tags = $this->Tags->find()->select(['categorie']);
 
         $this->set('tags', $list_tags);
     }

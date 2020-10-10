@@ -26,7 +26,7 @@ class AdminController extends AppController
         public function initialize() : void
     {
         parent::initialize();
-        
+
         $this->loadModel('Articles');
         $this->loadModel('Tags');
         $this->loadModel('Users');
@@ -44,7 +44,7 @@ class AdminController extends AppController
 
         public function users()
     {
-        
+
         $this->set('title' , 'Compte utilisateur');
 
         $users = $this->Users->find()
@@ -65,7 +65,7 @@ class AdminController extends AppController
         public function userview($id = null)
     {
         $this->set('title', 'Voir utilisateur');
-        
+
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
@@ -101,7 +101,7 @@ class AdminController extends AppController
                 return $this->redirect(['action' => 'users']);
             }
             $this->Flash->error(__('Impossible de modifier cet utilisateur.'));
-        
+
         }
         $this->set(compact('user'));
     }
@@ -202,8 +202,8 @@ class AdminController extends AppController
 
         $tags = $this->Tags->find('list',[
 
-        'keyField' => 'titre',
-    'valueField' => 'titre'
+        'keyField' => 'categorie',
+    'valueField' => 'categorie'
 
         ]);
 
@@ -233,7 +233,7 @@ class AdminController extends AppController
         $article = $this->Articles->get($id);
 
         //requête de type POST
-        
+
         if ($this->request->is(['post','put'])) {
 
         // création d'un tableau de données data[] afin de prendre en compte le parsage des URL et la mise en surbrillance du code
@@ -256,8 +256,8 @@ class AdminController extends AppController
 
         $tags = $this->Tags->find('list',[
 
-        'keyField' => 'titre',
-    'valueField' => 'titre'
+        'keyField' => 'categorie',
+    'valueField' => 'categorie'
 
         ]);
 
@@ -413,7 +413,7 @@ class AdminController extends AppController
 */
     public function parsing_content($article)
     {
-    
+
         // Url
 
             if (preg_match_all('~\{Url}([^{]*)\{/Url}~i', $article))
@@ -426,7 +426,7 @@ class AdminController extends AppController
             elseif (preg_match_all('~\{Code}([^{]*)\{/Code}~i', $article))
         {
             $article = h($article);
-            
+
             $article = preg_replace('~\{Code}([^{]*)\{/Code}~i', '<pre><code>$1</code></pre>', $article);
         }
 
@@ -434,7 +434,7 @@ class AdminController extends AppController
 
             elseif (preg_match_all('~\{Highlight}([^{]*)\{/Highlight}~i', $article))
         {
-           
+
             $article = preg_replace('~\{Highlight}([^{]*)\{/Highlight}~i', '<mark>$1</mark>', $article);
         }
 

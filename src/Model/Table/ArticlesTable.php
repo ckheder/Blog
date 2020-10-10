@@ -43,7 +43,12 @@ class ArticlesTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
-    }
+
+        $this->belongsTo('Tags', [
+            'foreignKey' => 'categorie',
+            'dependent' => true
+    ]);
+  }
 
     /**
      * Default validation rules.
