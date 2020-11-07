@@ -43,11 +43,10 @@ class TagsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
-<<<<<<< HEAD
+
 
         $this->hasMany('Articles');
-=======
->>>>>>> cb6315eada19c4ce4bb8f6f564ffdb70a0c3e37f
+
     }
 
     /**

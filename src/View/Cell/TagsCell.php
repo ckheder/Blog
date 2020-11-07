@@ -31,11 +31,7 @@ class TagsCell extends Cell
     {
         $this->loadModel('Tags');
 
-<<<<<<< HEAD
         $list_tags = $this->Tags->find()->select(['categorie']);
-=======
-        $list_tags = $this->Tags->find()->select(['titre']);
->>>>>>> cb6315eada19c4ce4bb8f6f564ffdb70a0c3e37f
 
         $this->set('tags', $list_tags);
     }

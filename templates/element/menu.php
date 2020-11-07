@@ -25,6 +25,5 @@
 		<i class="w3-large fas fa-sign-out-alt"></i>
 			<a href="/blog/admin/logout">Déconnexion</a>
 	</li>
-	
-</ul>
 
+</ul>
